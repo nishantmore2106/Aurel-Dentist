@@ -315,12 +315,13 @@ export const DentalHero: React.FC = () => {
           </div>
         </div>
 
-        {/* DESKTOP LAYOUT (lg:): Editorial Split with Reduced Centered Image Positioned Lower */}
-        <div className="hidden lg:block relative z-20 w-full my-auto py-2 xl:py-4">
-          <div className="w-full flex items-start justify-between relative">
+        {/* DESKTOP LAYOUT (lg:): Original Full Scale Editorial Composition */}
+        <div className="hidden lg:block relative my-auto py-2 lg:py-4 z-10 w-full">
+          <div className="w-full flex flex-col lg:flex-row items-start justify-between relative">
             {/* LEFT COLUMN: Headline + Description + CTA */}
-            <div className="w-[50%] xl:w-[48%] flex flex-col items-start z-20 pr-4">
-              <h1 className="text-6xl lg:text-[76px] xl:text-[88px] 2xl:text-[98px] font-light tracking-tight leading-[0.92] text-[#17212B]">
+            {/* Has z-10, extends into center so "Exceptional" slides behind the z-20 3D tooth crown */}
+            <div className="w-full lg:w-[58%] xl:w-[56%] flex flex-col items-start z-10 pr-0">
+              <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[104px] xl:text-[118px] 2xl:text-[130px] font-light tracking-tight leading-[0.90] text-[#17212B]">
                 <span className="block font-light text-[#17212B] whitespace-nowrap">
                   Exceptional
                 </span>
@@ -336,12 +337,12 @@ export const DentalHero: React.FC = () => {
               </h1>
 
               {/* Supporting Description */}
-              <p className="mt-5 xl:mt-6 text-[13px] md:text-[14px] text-[#59697A] leading-relaxed max-w-[340px] font-normal">
+              <p className="mt-5 md:mt-7 text-[13px] md:text-[14px] text-[#59697A] leading-relaxed max-w-[340px] font-normal">
                 Thoughtful dentistry, advanced technology, and personalized care for a healthier, more confident smile.
               </p>
 
               {/* Primary CTA: Solid black rectangular button with arrow */}
-              <div className="mt-6 xl:mt-7 flex items-center gap-4">
+              <div className="mt-6 md:mt-8 flex items-center gap-4">
                 <button
                   onClick={() => handleOpenBooking()}
                   className="group relative inline-flex items-center gap-3 px-6 py-3.5 bg-[#050505] text-white text-[13px] font-medium rounded-[2px] shadow-sm hover:bg-black/85 transition-all duration-200 active:scale-[0.98]"
@@ -364,9 +365,9 @@ export const DentalHero: React.FC = () => {
               </div>
             </div>
 
-            {/* RIGHT COLUMN: & Straight Smile */}
-            <div className="w-[50%] xl:w-[48%] flex flex-col items-end text-right z-20 pl-4 pr-0 lg:pr-4">
-              <h2 className="text-6xl lg:text-[76px] xl:text-[88px] 2xl:text-[98px] font-light tracking-tight leading-[0.92] text-[#17212B]">
+            {/* RIGHT COLUMN: Aligned with proper right screen margin & matching scale */}
+            <div className="w-full lg:w-[42%] xl:w-[44%] flex flex-col items-start lg:items-end text-left lg:text-right z-10 mt-8 lg:mt-0 pr-0 lg:pr-6">
+              <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-[104px] xl:text-[118px] 2xl:text-[130px] font-light tracking-tight leading-[0.90] text-[#17212B]">
                 <span className="block font-light text-[#17212B]/90 whitespace-nowrap">
                   &amp; Straight
                 </span>
@@ -378,24 +379,25 @@ export const DentalHero: React.FC = () => {
           </div>
         </div>
 
-        {/* DESKTOP CENTERED 3D DENTAL IMPLANT: Reduced Size & Positioned Lower Down */}
-        <div className="hidden lg:flex absolute left-1/2 top-[62%] -translate-x-1/2 -translate-y-1/2 z-10 pointer-events-none flex-col items-center justify-center">
-          {/* Ambient Radial Halo */}
-          <div className="absolute top-[28%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] lg:w-[360px] h-[320px] lg:h-[360px] rounded-full bg-white/40 blur-3xl pointer-events-none animate-halo-fade" />
+        {/* DESKTOP FULL-SCALE 3D DENTAL IMPLANT & ANNOTATION ECOSYSTEM */}
+        {/* Positioned at left-[53%] top-[55%] with full scale (580px-640px w, 820px-870px h) */}
+        <div className="hidden lg:flex absolute left-[53%] top-[55%] -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none flex-col items-center justify-center">
+          {/* Soft Static Ambient Radial Halo behind Crown */}
+          <div className="absolute top-[26%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] sm:w-[460px] h-[380px] sm:h-[460px] rounded-full bg-white/40 blur-3xl pointer-events-none animate-halo-fade" />
 
-          {/* 3D Implant Vessel Wrapper with smooth reveal */}
+          {/* 3D Implant Vessel Wrapper with smooth bottom-to-up reveal animation */}
           <div className="relative flex items-center justify-center animate-reveal-up">
             {/* Elliptical Perspective Orbit Ring */}
             <div
-              className="absolute top-[49%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[310px] lg:w-[350px] xl:w-[380px] h-[86px] lg:h-[98px] xl:h-[106px] rounded-[100%] border border-white/50 pointer-events-none -rotate-[14deg] shadow-[0_0_16px_rgba(255,255,255,0.3)] opacity-75"
+              className="absolute top-[49%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[420px] md:w-[490px] lg:w-[550px] h-[95px] sm:h-[115px] lg:h-[125px] rounded-[100%] border border-white/50 pointer-events-none -rotate-[14deg] shadow-[0_0_18px_rgba(255,255,255,0.3)] opacity-75"
             />
 
-            {/* Central 3D Implant Image Container (Refined reduced size, ~430-470px) */}
-            <div className="relative w-[300px] lg:w-[330px] xl:w-[360px] h-[390px] lg:h-[430px] xl:h-[470px] flex items-center justify-center overflow-visible">
+            {/* Central 3D Implant Image Container (Full original desktop scale) */}
+            <div className="relative w-[350px] sm:w-[420px] md:w-[500px] lg:w-[580px] xl:w-[640px] h-[480px] sm:h-[600px] md:h-[720px] lg:h-[820px] xl:h-[870px] max-h-[92vh] flex items-center justify-center overflow-visible">
               <img
                 src="/assets/aistudio/4e674d26-77e4-49b9-98c3-5c73ffcdb3c7.png"
                 alt="Aurel High-Precision Dental Implant"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-auto max-w-none select-none pointer-events-none drop-shadow-[0_24px_48px_rgba(23,33,43,0.22)]"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-auto max-w-none select-none pointer-events-none drop-shadow-[0_28px_56px_rgba(23,33,43,0.24)]"
                 loading="eager"
               />
             </div>
@@ -410,7 +412,7 @@ export const DentalHero: React.FC = () => {
           <div className="flex items-start gap-3">
             <span className="w-2 h-2 rounded-full bg-[#17212B] mt-2 sm:mt-2.5 flex-shrink-0" />
             <div>
-              <div className="text-2xl sm:text-3xl lg:text-[38px] font-normal text-[#17212B] tracking-tight leading-none">
+              <div className="text-2xl sm:text-3xl lg:text-[42px] font-normal text-[#17212B] tracking-tight leading-none">
                 827+
               </div>
               <p className="text-[12px] md:text-[13px] text-[#59697A] mt-1.5 leading-snug max-w-[240px]">
@@ -423,7 +425,7 @@ export const DentalHero: React.FC = () => {
           <div className="flex md:flex-col items-start md:items-end gap-6 md:gap-4 text-left md:text-right">
             {/* Stat: 170+ */}
             <div>
-              <div className="text-xl sm:text-2xl lg:text-[30px] font-normal text-[#17212B] tracking-tight leading-none">
+              <div className="text-xl sm:text-2xl lg:text-[34px] font-normal text-[#17212B] tracking-tight leading-none">
                 170+
               </div>
               <p className="text-[11px] md:text-[12px] text-[#59697A] mt-0.5 sm:mt-1 leading-tight">
@@ -433,7 +435,7 @@ export const DentalHero: React.FC = () => {
 
             {/* Stat: 85% Satisfied Clients */}
             <div>
-              <div className="text-xl sm:text-2xl lg:text-[30px] font-normal text-[#17212B] tracking-tight leading-none">
+              <div className="text-xl sm:text-2xl lg:text-[34px] font-normal text-[#17212B] tracking-tight leading-none">
                 85%
               </div>
               <p className="text-[11px] md:text-[12px] text-[#59697A] mt-0.5 sm:mt-1 leading-tight">
