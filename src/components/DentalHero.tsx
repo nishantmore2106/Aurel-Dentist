@@ -293,21 +293,21 @@ export const DentalHero: React.FC = () => {
             </button>
           </div>
 
-          {/* CENTERED REDUCED 3D IMPLANT ON MOBILE & TABLET (Situated below all text) */}
-          <div className="relative w-full my-5 sm:my-7 flex justify-center items-center pointer-events-none select-none">
+          {/* BIG 3D DENTAL IMPLANT AT BOTTOM SIDE ON MOBILE & TABLET (Stats removed) */}
+          <div className="relative w-full mt-4 sm:mt-6 -mb-6 sm:-mb-6 flex justify-center items-end pointer-events-none select-none overflow-visible">
             {/* Soft Ambient Radial Halo */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[180px] sm:w-[220px] md:w-[260px] h-[180px] sm:h-[220px] md:h-[260px] rounded-full bg-white/40 blur-2xl pointer-events-none animate-halo-fade" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[360px] md:w-[420px] h-[300px] sm:h-[360px] md:h-[420px] rounded-full bg-white/40 blur-3xl pointer-events-none animate-halo-fade" />
 
-            {/* 3D Vessel with Orbit Ring & Image */}
+            {/* 3D Vessel with Orbit Ring & Big Image */}
             <div className="relative flex items-center justify-center animate-reveal-up">
               <div
-                className="absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[170px] sm:w-[210px] md:w-[250px] h-[52px] sm:h-[64px] md:h-[76px] rounded-[100%] border border-white/50 pointer-events-none -rotate-[14deg] shadow-[0_0_12px_rgba(255,255,255,0.3)] opacity-75"
+                className="absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[290px] sm:w-[350px] md:w-[410px] h-[80px] sm:h-[96px] md:h-[112px] rounded-[100%] border border-white/50 pointer-events-none -rotate-[14deg] shadow-[0_0_16px_rgba(255,255,255,0.3)] opacity-75"
               />
-              <div className="relative w-[160px] sm:w-[200px] md:w-[240px] h-[210px] sm:h-[260px] md:h-[310px] flex items-center justify-center overflow-visible">
+              <div className="relative w-[280px] sm:w-[340px] md:w-[400px] h-[370px] sm:h-[440px] md:h-[510px] flex items-center justify-center overflow-visible">
                 <img
                   src="/assets/aistudio/4e674d26-77e4-49b9-98c3-5c73ffcdb3c7.png"
                   alt="Aurel High-Precision Dental Implant"
-                  className="h-full w-auto max-w-none select-none pointer-events-none drop-shadow-[0_18px_36px_rgba(23,33,43,0.22)]"
+                  className="h-full w-auto max-w-none select-none pointer-events-none drop-shadow-[0_24px_48px_rgba(23,33,43,0.24)]"
                   loading="eager"
                 />
               </div>
@@ -405,9 +405,9 @@ export const DentalHero: React.FC = () => {
         </div>
 
         {/* ========================================================= */}
-        {/* LOWER SECTION: Secondary Information & Understated Statistics */}
+        {/* LOWER SECTION: Secondary Information & Understated Statistics (Desktop Only) */}
         {/* ========================================================= */}
-        <div className="relative z-20 w-full mt-4 sm:mt-6 md:mt-8 pt-4 sm:pt-5 border-t border-[#17212B]/10 flex flex-col md:flex-row justify-between items-start md:items-end gap-5 md:gap-6">
+        <div className="hidden lg:flex relative z-20 w-full mt-4 sm:mt-6 md:mt-8 pt-4 sm:pt-5 border-t border-[#17212B]/10 flex-col md:flex-row justify-between items-start md:items-end gap-5 md:gap-6">
           {/* Lower-Left Area: Statistic 827+ */}
           <div className="flex items-start gap-3">
             <span className="w-2 h-2 rounded-full bg-[#17212B] mt-2 sm:mt-2.5 flex-shrink-0" />
